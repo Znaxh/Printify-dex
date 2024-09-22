@@ -6,6 +6,7 @@ import Testimonial from './components/Testimonial'
 import ProfitCard from './components/Profit'
 import Features from './components/Features'
 import Service from './components/Service'
+import HeroSection from './components/HeroSection'
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       {/* <Testimonial /> */}
       {/* <ProfitCard /> */}
       {/* <Features /> */}
-      <Service />
+      {/* <Service /> */}
+      <HeroSection />
     </div>
   )
 }

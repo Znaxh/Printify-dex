@@ -1,6 +1,6 @@
 import React from 'react';
 
-const mainButton = ({ href, children }) => {
+const MainButton = ({ href, children }) => {
   return (
     <a
       href={href}
@@ -11,4 +11,4 @@ const mainButton = ({ href, children }) => {
   );
 };
 
-export default mainButton;
+export default MainButton;
