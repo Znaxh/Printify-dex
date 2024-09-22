@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Socials from './components/Socials'
 import Testimonial from './components/Testimonial'
 import ProfitCard from './components/Profit'
+import Features from './components/Features'
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       {/* <Footer /> */}
       {/* <Socials /> */}
       {/* <Testimonial /> */}
-      <ProfitCard />
+      {/* <ProfitCard /> */}
+      <Features />
     </div>
   )
 }
