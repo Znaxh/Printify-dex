@@ -14,13 +14,13 @@ const HeroSection = () => {
               <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 <ul>
                   <li className="flex items-center">
-                    <span className="text-green-600 mr-2">✔</span> 100% Free to use
+                    <img width="24" height="24" src="https://img.icons8.com/color/48/checkmark--v1.png" alt="checkmark--v1"/> 100% Free to use
                   </li>
                   <li className="flex items-center">
-                    <span className="text-green-600 mr-2">✔</span> 900+ High-Quality Products
+                    <img width="24" height="24" src="https://img.icons8.com/color/48/checkmark--v1.png" alt="checkmark--v1"/> 900+ High-Quality Products
                   </li>
                   <li className="flex items-center">
-                    <span className="text-green-600 mr-2">✔</span> Largest global print network
+                    <img width="24" height="24" src="https://img.icons8.com/color/48/checkmark--v1.png" alt="checkmark--v1"/> Largest global print network
                   </li>
                 </ul>
               </p>
