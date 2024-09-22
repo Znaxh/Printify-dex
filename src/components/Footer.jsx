@@ -360,28 +360,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        
-        <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+        <div className="flex flex-col sm:flex-row justify-center py-2 items-center text-sm">
           <p>&copy; {new Date().getFullYear()} Printify, Inc. All rights reserved.</p>
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#" className="hover:text-green-600 transition">
-                Terms of Service
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-green-600 transition">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-green-600 transition">
-                Cookie Policy
-              </a>
-            </li>
-          </ul>
-        </div>
-        
+        </div>        
       </div>
     </footer>
   );
