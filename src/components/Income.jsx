@@ -1,11 +1,11 @@
 import React from 'react'
 import Container from './Container'
 import { AiFillCaretDown } from 'react-icons/ai'
-import plantImage from '../assets/moneyPlant.jpg'
+import plantImage from '../public/images/moneyPlant.jpg'
 import CustomButton from './customButton'
 import { motion } from 'framer-motion'
 
-export default function Profit() {
+export default function Income() {
   return (
     <Container className='relative overflow-hidden pt-20 sm:pt-40 pb-16 sm:pb-32'>
         <div className="absolute -top-60 left-0 right-0 hidden sm:grid place-items-center z-10">

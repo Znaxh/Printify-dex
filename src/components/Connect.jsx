@@ -50,7 +50,7 @@ export default function ConnectStore() {
     {
       name: "Printify API",
       url: "https://printify.com/printify-api/",
-      imgSrc: "https://cdn-icons-png.flaticon.com/512/2165/2165004.png",
+      imgSrc: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEzUlEQVR4nO2cS4gdRRSGv6AgmFEMjqIZRaLBzCYmKGqyEDWgKBpfRFCzc+Er40IMuBDFGATdmGg2vheDL0bjKkbxiS4UEmME32AEA4KOBjTJYuLN2FJyGo5F38d4O3R19/9BMdN1q/t2nf/Ws08fEEIIIYQQQgghhBBCCCGEEEII0QJOByaAt4BvgYNAVtN00OqwHVgHnEaNGAOeBjoJGDI7QmkWmALOIHGuAfbbTR8CXgVuApYA86kv860ON1udDlkdQ11Xkyh32y8ns1/PIprLmcDrrrWErjm5lhFu7DBwD+3hXqvzbEotZcx1U7EYJwMbgd01GtS/+h+ihPP+BE4lAZ5z3ZRnDTANbAYuqPkY0o+tZoMwmal8anvYBrlFkRg/AefQDs4yG3Ssx6iMCftlhJmH76amWyRGzpTZ4i4qZLvdRJgO5my0bqptrDVbbKvyJr63mzjb5X1hY0bbWGK2CCv6yjhgNzES5fnjtjBitgj1r4x8qhjntZWs6vpLkP8iQRJDgiSGBEkMCZIYEiQxJEhiNFKQR4E/gJ3AiQOUXwC8B3zWJb0PPA5c2OMaK4EPStjyaZwgxwEz7rq3D3DOyjk863gFOLbgGhtKMmbjBFkTGTBsXs5FkOeB+1x6AJgEfnNl/M70sIL80HRBJu38Gfc3tJpBBbmiS5kTgE9cufNLEiRrsiBHA/vs/Eecw0RoNcMKEhh35cIjgjIE+bLJglzqrhe8OnbY/6HVlCFI4BcrFx65ejSGFLDJjPW1HT9ox/us9ZQhyKdW7kMJ0p89ZqzH7Pg8Z+hLShLkcysX3Fs9GtQjljqjXmR584CfLW9TCYLMc+5KL5QkSGMH9fu7dE/PWn5oPcMKcpUrd2v0mQSJyAfwl6L865wRlw4hyCo3oE8XPGKWII7gx/R3gfcKZrh8TRJaUT9BwhjxrksfOyHydc3lBdfQtNdxhxmrY/tSMW/b5zsGEKRXegdY3uUamvYW+HZ91MOrPrNWtLCPIE8Ct7m01lpEcN7rhQQp2Ex8yFpInM7ts9noBbmyj+HLFqRxK/UbB+xush6bjVUK0rhp74tzFGSmYLNRgpQkSFhv/G7l+z0Yuth9V7zZKEFKEmSVO/+yPmWPcuLFm40SpCRBNjtf2GMGKP9yl9W8BClJkD1dtsK7cYv7vtCF5UiQkgSZtM2+8MLoICwA9tr2fHhjKSe81/cd8GOUPxeutS2VsHhs9Syr7mQFxxKkQiRIYkiQxJAgiSFBEkOCJIYESYzkBMm9OEaivDa8Fn28BZzxx1mUl0TggN0tCRywAtiVWuCAotAaDwNP0Hy22FPOpEJrrCtw8T/J9oWW0VyWA78CowXBZ+6s8L7+jc7ZsdBEwUE65wbbCFzWUDH2ms9YzuJUwjMFnrFfRohBSCTKtHmCrKj5QD9i2/xbrGVcH33+htngKRJgoZtthXB3nlFzINjlAtXUMe23OmyIuqnAeisT3os8hURY7YJgxqI0mfUuCGbwHU6KCffW09YhHhbVgcWum5q1yU2SXG0Lo8wGuSl79DregDFk3Ka2rwF/uW4quZYRM2rrkCaHGu9YBNIkwsIOypjNyd8Evqn5oH7A6rDN6lT51FYIIYQQQgghhBBCCCGEEEIIIQRHmn8A38illHkjVu4AAAAASUVORK5CYII=",
       position: { left: 1.9993, top: 63.967 },
     },
     {
@@ -61,11 +61,6 @@ export default function ConnectStore() {
     },
   ];
 
-  const randomSize = () => {
-    const min = 74;
-    const max = 165;
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
   return (
     <Container className="relative overflow-hidden pb-20">
       <div className="absolute -top-60 left-0 right-0 hidden sm:grid place-items-center text-center">
@@ -87,17 +82,17 @@ export default function ConnectStore() {
               initial={{left: `50%`, top: `50%`, transform: "translate(-50%, -50%)"}}
               transition={{duration:0.5, delay:0.3+index*0.05, ease:"easeInOut"}}
               key={index}
-              className={`absolute p-1 sm:p-5 border bg-white shadow-2xl rounded-2xl cursor-pointer aspect-square hover:scale-110 duration-300 object-cover flex items-center justify-center`}
+              className={` absolute p-1 sm:p-5 border bg-white shadow-2xl rounded-2xl cursor-pointer aspect-square object-cover flex items-center justify-center`}
 
               style={{
                 left: `${store.position.left}%`,
                 top: `${store.position.top}%`,
-                maxWidth: `${randomSize()}px`,
+                maxWidth: `${100}px`,
                 width: `15%`,
               }}
             >
               <img
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain hover:scale-110 duration-300"
                 src={store.imgSrc}
                 alt={store.name}
               />

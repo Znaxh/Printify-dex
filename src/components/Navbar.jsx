@@ -35,11 +35,20 @@ function Navbar() {
             className="fa-solid fa-bars lg:hidden text-[#39b75d] text-2xl"
             onClick={handleToggleSidebar} // Toggle sidebar on bar click
           ></i>
+          <div className="hidden sm:block">
           <img
               src="https://printify.com/pfh/media/logo-old-B5JY5YNQ.svg"
               alt="Printify Logo"
               className="h-12"
             />
+          </div>
+          <div className="relative block sm:hidden">
+          <img
+              src="src\assets\image.png"
+              alt="Printify Logo"
+              className="h-12"
+            />
+          </div>
         </div>
 
         {/* Navigation Links Section */}
@@ -184,10 +193,10 @@ function Navbar() {
 
         {/* Buttons Section */}
         <div className="flex justify-between items-center lg:gap-5 gap-2">
-          <button className="text-sm border border-[#c2c2c2] text-[#353a47] rounded-md px-8 py-2 lg:px-8 lg:py-2 font-semibold hover:text-[#39b75d] whitespace-nowrap">
+          <button className="text-sm border border-[#c2c2c2] text-[#353a47] rounded-md px-4 py-2 lg:px-4 lg:py-1 font-semibold hover:text-[#39b75d] whitespace-nowrap">
             Login
           </button>
-          <button className="text-sm border bg-[#39b75d] text-[#fff] rounded-md px-8 py-2 lg:px-8 lg:py-2 font-semibold hover:bg-[#27793e] whitespace-nowrap">
+          <button className="text-sm border bg-[#39b75d] text-[#fff] rounded-md px-4 py-2 lg:px-4 lg:py-1 font-semibold hover:bg-[#27793e] whitespace-nowrap">
             Sign up
           </button>
         </div>

@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 px-16 text-gray-700 py-10">
+    <footer className="bg-gray-100 sm:px-16 text-gray-700 py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Integrations */}
           <div>
             <h3 className="text-lg font-bold mb-4">Integrations</h3>

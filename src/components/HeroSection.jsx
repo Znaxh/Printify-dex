@@ -37,7 +37,7 @@ const HeroSection = () => {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-between px-8 py-3 border border-gray-400 text-base font-medium rounded-md hover:text-green-600 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-gray-400 text-base font-medium rounded-md hover:text-green-600 md:py-4 md:text-lg md:px-10"
                   >
                     <img width="20" height="20" src="https://img.icons8.com/ios/50/play-button-circled--v1.png" alt="play-button-circled--v1"/>
                     How it works?
