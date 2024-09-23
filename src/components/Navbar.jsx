@@ -1,182 +1,199 @@
-import React, { useState } from 'react';
-import MainButton from './common/Button/mainButton';
-import SecondaryButton from './common/Button/secondaryButton';
+import { Link } from "react-router-dom";
+import SideBarMenu from "./SideBarMenu";
+import { useState } from "react";
 
-const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState({
-    howItWorks: false,
-    services: false,
-    useCases: false,
-    needHelp: false,
-  });
+function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false);
 
-  const toggleDropdown = (menu) => {
-    setDropdownOpen((prev) => ({ ...prev, [menu]: !prev[menu] }));
+  const handleToggleSidebar = () => {
+    setShowSidebar(!showSidebar);
   };
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 w-full z-10">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        {/* Logo Section */}
-        <div className="flex items-center">
-          <a href="#">
-            <img
-              src="https://printify.com/pfh/media/logo-old-B5JY5YNQ.svg"
-              alt="Printify Logo"
-              className="h-8"
-            />
-          </a>
-        </div>
-
-        {/* Menu Items */}
-        <ul className="hidden md:flex space-x-8 items-center">
-          <li>
-            <a href="#" className="text-gray-700 hover:text-green-600 transition duration-300">
-              Catalog
-            </a>
-          </li>
-
-          {/* Dropdown for "How it works" */}
-          <li
-            className="relative"
-            onMouseEnter={() => toggleDropdown('howItWorks')}
-            onMouseLeave={() => toggleDropdown('howItWorks')}
-          >
-            <a href="#" className="text-gray-700 hover:text-green-600 transition duration-300 flex items-center">
-              How it works
-              {/* Arrow Icon */}
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-300 ${
-                  dropdownOpen.howItWorks ? 'rotate-180' : 'rotate-0'
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-            {dropdownOpen.howItWorks && (
-              <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Submenu 1</a>
-                </li>
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Submenu 2</a>
-                </li>
-              </ul>
-            )}
-          </li>
-
-          {/* Dropdown for "Services" */}
-          <li
-            className="relative"
-            onMouseEnter={() => toggleDropdown('services')}
-            onMouseLeave={() => toggleDropdown('services')}
-          >
-            <a href="#" className="text-gray-700 hover:text-green-600 transition duration-300 flex items-center">
-              Services
-              {/* Arrow Icon */}
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-300 ${
-                  dropdownOpen.services ? 'rotate-180' : 'rotate-0'
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-            {dropdownOpen.services && (
-              <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Service 1</a>
-                </li>
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Service 2</a>
-                </li>
-              </ul>
-            )}
-          </li>
-
-          {/* Dropdown for "Use-cases" */}
-          <li
-            className="relative"
-            onMouseEnter={() => toggleDropdown('useCases')}
-            onMouseLeave={() => toggleDropdown('useCases')}
-          >
-            <a href="#" className="text-gray-700 hover:text-green-600 transition duration-300 flex items-center">
-              Use-cases
-              {/* Arrow Icon */}
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-300 ${
-                  dropdownOpen.useCases ? 'rotate-180' : 'rotate-0'
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-            {dropdownOpen.useCases && (
-              <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Use Case 1</a>
-                </li>
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Use Case 2</a>
-                </li>
-              </ul>
-            )}
-          </li>
-
-          {/* Dropdown for "Need help?" */}
-          <li
-            className="relative"
-            onMouseEnter={() => toggleDropdown('needHelp')}
-            onMouseLeave={() => toggleDropdown('needHelp')}
-          >
-            <a href="#" className="text-gray-700 hover:text-green-600 transition duration-300 flex items-center">
-              Need help?
-              {/* Arrow Icon */}
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-300 ${
-                  dropdownOpen.needHelp ? 'rotate-180' : 'rotate-0'
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-            {dropdownOpen.needHelp && (
-              <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">FAQ</a>
-                </li>
-                <li className="p-2 hover:bg-gray-100">
-                  <a href="#">Contact Support</a>
-                </li>
-              </ul>
-            )}
-          </li>
-        </ul>
-
-        {/* CTA Buttons */}
-        <div className="flex space-x-4">
-          <SecondaryButton href="/login">Log in</SecondaryButton>
-          <MainButton href="#">Sign Up</MainButton>
+    <header>
+      {/* Conditionally Render SideBarMenu */}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 bg-gray-800 bg-opacity-50 transition-opacity ${
+          showSidebar ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={handleToggleSidebar}
+      >
+        <div
+          className={`fixed left-0 top-0 w-10/12 md:w-4/12 h-full shadow-lg transform transition-transform ${
+            showSidebar ? "translate-x-0" : "-translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <SideBarMenu setShowSidebar={setShowSidebar} />
         </div>
       </div>
-    </nav>
+
+      <nav className="flex justify-around md:justify-between lg:justify-around items-center p-2 px-8 lg:p-4 lg:px-4 border-b-2 relative bg-white">
+        {/* Logo Section */}
+        <div className="flex justify-between items-center gap-2">
+          <i
+            className="fa-solid fa-bars lg:hidden text-[#39b75d] text-2xl"
+            onClick={handleToggleSidebar} // Toggle sidebar on bar click
+          ></i>
+          <img
+              src="https://printify.com/pfh/media/logo-old-B5JY5YNQ.svg"
+              alt="Printify Logo"
+              className="h-12"
+            />
+        </div>
+
+        {/* Navigation Links Section */}
+        <div className="hidden lg:block">
+          <ul className="flex justify-between items-center gap-5">
+            <li>
+              <Link
+                to="/"
+                className="text-[#353a47] hover:text-[#39b75d] font-medium"
+              >
+                Catalog
+              </Link>
+            </li>
+
+            {/* How it Works Dropdown */}
+            <li className="group relative">
+              <Link
+                to="/"
+                className="duration-1000 text-[#353a47] group-hover:text-[#39b75d] font-medium"
+              >
+                How it Works
+              </Link>
+              <i className="fa-solid fa-caret-down transition duration-1000 group-hover:text-[#39b75d] ml-2"></i>
+
+              {/* Nested UL - Dropdown */}
+              <ul className="absolute left-0 hidden group-hover:block bg-white border border-gray-200 mt-0 w-[210px] top-full z-10">
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  How Printify Works
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Print On Demand
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Printify Quality Promise
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  What To Sell
+                </li>
+              </ul>
+            </li>
+
+            {/* Other Links */}
+            <li>
+              <Link
+                to="/"
+                className="text-[#353a47] hover:text-[#39b75d] font-medium"
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/"
+                className="text-[#353a47] hover:text-[#39b75d] font-medium"
+              >
+                Blog
+              </Link>
+            </li>
+
+            {/* Services Dropdown */}
+            <li className="group relative">
+              <Link
+                to="/"
+                className="duration-1000 text-[#353a47] group-hover:text-[#39b75d] font-medium"
+              >
+                Services
+              </Link>
+              <i className="fa-solid fa-caret-down duration-1000 group-hover:text-[#39b75d] ml-2"></i>
+
+              {/* Nested UL - Dropdown */}
+              <ul className="absolute left-0 hidden group-hover:block bg-white border border-gray-200 mt-0 w-[210px] top-full">
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Printify Studio
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Printify Express Delivery
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Transfer Products
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Order In Bulk
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Experts Program
+                </li>
+              </ul>
+            </li>
+
+            {/* Use-cases Dropdown */}
+            <li className="group relative">
+              <Link
+                to="/"
+                className="duration-1000 text-[#353a47] group-hover:text-[#39b75d] font-medium"
+              >
+                Use-cases
+              </Link>
+              <i className="fa-solid fa-caret-down duration-1000 group-hover:text-[#39b75d] ml-2"></i>
+
+              {/* Nested UL - Dropdown */}
+              <ul className="absolute left-0 hidden group-hover:block bg-white border border-gray-200 mt-0 w-[210px] top-full">
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Merch for Fans
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Merch for eCommerce
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Merch for Enterprises
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Grow Your Store
+                </li>
+              </ul>
+            </li>
+
+            {/* Need Help Dropdown */}
+            <li className="group relative">
+              <Link
+                to="/"
+                className="duration-1000 text-[#353a47] group-hover:text-[#39b75d] font-medium"
+              >
+                Need Help?
+              </Link>
+              <i className="fa-solid fa-caret-down duration-1000 group-hover:text-[#39b75d] ml-2"></i>
+
+              {/* Nested UL - Dropdown */}
+              <ul className="absolute left-0 hidden group-hover:block bg-white border border-gray-200 mt-0 w-[210px] top-full">
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Help Center
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  Contacts
+                </li>
+                <li className="px-4 py-2 text-[#353a47] hover:text-[#39b75d]">
+                  My Requests
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        {/* Buttons Section */}
+        <div className="flex justify-between items-center lg:gap-5 gap-2">
+          <button className="text-sm border border-[#c2c2c2] text-[#353a47] rounded-md px-8 py-2 lg:px-8 lg:py-2 font-semibold hover:text-[#39b75d] whitespace-nowrap">
+            Login
+          </button>
+          <button className="text-sm border bg-[#39b75d] text-[#fff] rounded-md px-8 py-2 lg:px-8 lg:py-2 font-semibold hover:bg-[#27793e] whitespace-nowrap">
+            Sign up
+          </button>
+        </div>
+      </nav>
+    </header>
   );
-};
+}
 
 export default Navbar;

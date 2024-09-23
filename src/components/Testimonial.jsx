@@ -33,19 +33,11 @@ const testimonials = [
     feedback:
       'The support and tools provided by Printify helped me grow my business significantly over the last year.',
   },
-  {
-    name: 'Lisa Marie',
-    role: 'Etsy Store Owner',
-    img: 'https://via.placeholder.com/50', // Placeholder, replace with actual image URL
-    rating: 5,
-    feedback:
-      'I love how easy it is to get started with Printify. I was able to set up my store in no time!',
-  },
 ];
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 text-left w-80 flex-shrink-0">
+    <div className="bg-white shadow-md rounded-lg justify-between p-6 text-left w-80 flex-shrink-0">
       <div className="flex items-center mb-4">
         <img
           src={testimonial.img}

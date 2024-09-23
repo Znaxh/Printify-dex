@@ -51,11 +51,9 @@ const HeroSection = () => {
       </div>
 
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://via.placeholder.com/500"
-          alt="T-Shirt Design"
-        />
+      <video className='w-3/4' autoPlay loop muted >
+          <source src="https://printify.com/pfh/assets/hero/newbies-hero-horizontal.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Features = () => {
                 <img
                   src="https://printify.com/pfh/assets/legacy/higher-profits.svg"
                   alt="Higher Profits"
-                  className="h-20 w-20 mb-4"
+                  className="h-40 w-40 mb-4"
                 />
               </div>
               <h3 className="text-lg leading-6 font-bold text-gray-900">Higher Profits</h3>
@@ -27,7 +27,7 @@ const Features = () => {
                 <img
                   src="	https://printify.com/pfh/assets/legacy/robust-scaling.svg"
                   alt="Robust Scaling"
-                  className="h-20 w-20 mb-4"
+                  className="h-40 w-40 mb-4"
                 />
               </div>
               <h3 className="text-lg leading-6 font-bold text-gray-900">Robust Scaling</h3>
@@ -42,7 +42,7 @@ const Features = () => {
                 <img
                   src="https://printify.com/pfh/assets/legacy/best-selection.svg"
                   alt="Best Selection"
-                  className="h-20 w-20 mb-4"
+                  className="h-40 w-40 mb-4"
                 />
               </div>
               <h3 className="text-lg leading-6 font-bold text-gray-900">Best Selection</h3>

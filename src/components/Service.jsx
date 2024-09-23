@@ -16,8 +16,8 @@ const Service = () => {
                   className="h-40 w-40 mb-10"
                 />
               </div>
-              <h3 className="lg:text-left text-center text-xl text-green-600 uppercase font-bold">Create</h3>
-              <h3 className="lg:text-left text-center text-xl leading-6 font-bold text-gray-900">custom products</h3>
+              <h3 className="lg:text-left text-center text-2xl text-green-600  uppercase font-bold">Create</h3>
+              <h3 className="lg:text-left text-center text-2xl leading-6 mb-4 font-bold text-gray-900">custom products</h3>
               <p className="mt-2 text-sm text-gray-500 lg:text-left text-center">
                 Easily add your designs to a wide range of products using our free tools.
               </p>
@@ -32,8 +32,8 @@ const Service = () => {
                   className="h-40 w-40 mb-10"
                 />
               </div>
-              <h3 className="lg:text-left text-center text-xl text-green-600 uppercase font-bold">Sell</h3>
-              <h3 className="lg:text-left text-center text-xl leading-6 font-bold text-gray-900">on your terms</h3>
+              <h3 className="lg:text-left text-center text-2xl text-green-600 uppercase font-bold">Sell</h3>
+              <h3 className="lg:text-left text-center text-2xl mb-4 leading-6 font-bold text-gray-900">on your terms</h3>
               <p className="mt-2 text-sm text-gray-500 lg:text-left text-center">
                 You choose the products, sale price, and where to sell.
               </p>
@@ -48,8 +48,8 @@ const Service = () => {
                   className="h-40 w-40 mb-10"
                 />
               </div>
-              <h3 className="lg:text-left text-center text-xl text-green-600 uppercase font-bold">We Handle</h3>
-              <h3 className="lg:text-left text-center text-xl leading-6 font-bold text-gray-900">fulfillment</h3>
+              <h3 className="lg:text-left text-center text-2xl text-green-600 uppercase font-bold">We Handle</h3>
+              <h3 className="lg:text-left text-center text-2xl mb-6 leading-6 font-bold text-gray-900">fulfillment</h3>
               <p className="mt-2 text-sm text-gray-500 lg:text-left text-center">
                 Once an order is placed, we automatically handle all the printing and delivery logistics.
               </p>
